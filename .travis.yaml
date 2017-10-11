@@ -1,0 +1,11 @@
+sudo: required
+dist: trusty
+
+python:
+  - "2.7"
+
+before_install:
+  - ./setup.sh
+
+script:
+ - cd python/ && ./run.sh
