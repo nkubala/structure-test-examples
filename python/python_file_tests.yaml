@@ -7,12 +7,12 @@ globalEnvVars:
     value: "/env/bin:$PATH"
 
 
-# fileContentTests:
+fileContentTests:
 
-# # check that the default apt repository is set correctly
-#   - name: 'apt sources'
-#     path: '/etc/apt/sources.list'
-#     expectedContents: ['.*httpredir\.debian\.org/debian jessie main.*']
+# check that the default apt repository is set correctly
+  - name: 'apt sources'
+    path: '/etc/apt/sources.list'
+    expectedContents: ['.*httpredir\.debian\.org/debian jessie main.*']
 
 
 fileExistenceTests:
