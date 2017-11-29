@@ -33,20 +33,3 @@ commandTests:
   - name: "flask integration"
     command: "python"
     args: ["-c", "\"import sys; import flask; sys.exit(0 if flask.__file__.startswith('/env') else 1)\""]
-
-
-fileContentTests:
-
-# check that the default apt repository is set correctly
-  - name: 'apt sources'
-    path: '/etc/apt/sources.list'
-    expectedContents: ['.*httpredir\.debian\.org/debian jessie main.*']
-
-
-fileExistenceTests:
-
-# check that the apt-packages text file exists and has the correct permissions
-  - name: 'apt-packages'
-    path: '/resources/apt-packages.txt'
-    shouldExist: true
-    permissions: '-rw-rw-r--'
